@@ -1,0 +1,21 @@
+.color-mod-switcher {
+
+    &__fields {
+        display: flex;
+        justify-content: space-between;
+
+        .field input {
+            text-align: center;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        .button + .button {
+            margin-left: 8px;
+        }
+    }
+}

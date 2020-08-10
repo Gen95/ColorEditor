@@ -1,0 +1,21 @@
+.main-panel {
+    background: var(--color-ui-panel);
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid var(--color-ui-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__col + &__col {
+        margin-left: 12px;
+    }
+}

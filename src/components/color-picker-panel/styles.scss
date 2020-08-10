@@ -1,0 +1,25 @@
+.color-picker-panel {
+    width: 310px;
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+        &__field + &__field {
+            margin-top: 8px;
+        }
+
+    &__color-picker {
+        margin-top: 10px;
+    }
+
+    &__controls {
+        margin-top: 12px;
+    }
+}

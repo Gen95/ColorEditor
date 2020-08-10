@@ -1,0 +1,26 @@
+.button {
+    background: var(--color-ui-panel-light);
+    border: 0;
+    border-radius: 4px;
+    color: var(--color-text);
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+    display: block;
+    padding: 6px;
+    flex: 1;
+
+    &_active {
+        background: lighten(#2a3137, 5%);
+    }
+
+    &:active {
+        background: darken(#2a3137, 2%);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
