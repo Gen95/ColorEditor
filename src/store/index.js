@@ -4,7 +4,7 @@ import React, { createContext, useContext, useCallback } from 'react';
 
 export const initialState = getStorage("state") || {
     data,
-    currentIndexItem: 0,
+    selectIdItem: 0,
     maxID: data.length,
 };
 

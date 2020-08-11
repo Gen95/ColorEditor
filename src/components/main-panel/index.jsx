@@ -10,7 +10,7 @@ export const MainPanel = () => {
 
     return (
         <Context.Provider value={{dispatch, state}}>
-            <div class="main-panel">
+            <div className="main-panel">
                 <div className="main-panel__col">
                     <ColorPickerPanel />
                 </div>

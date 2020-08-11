@@ -12,7 +12,7 @@ import "./styles.scss";
 
 export const ColorList = () => {
   const {
-    state: { data, currentIndexItem },
+    state: { data, selectIdItem },
     addColor,
     selectItem,
     updateData,
@@ -26,8 +26,8 @@ export const ColorList = () => {
     });
   };
 
-  const handleSelectColor = (index) => {
-    selectItem(index);
+  const handleSelectColor = (id) => {
+    selectItem(id);
   };
 
   function onChange(_, sourceIndex, targetIndex) {
@@ -51,11 +51,11 @@ export const ColorList = () => {
               <GridItem key={item.id}>
                 <div
                   className={
-                    index === currentIndexItem ? "item active" : "item"
+                    item.id === selectIdItem ? "item active" : "item"
                   }
                   style={{ backgroundColor: item.color }}
                   onClick={() => {
-                    handleSelectColor(index);
+                    handleSelectColor(item.id);
                   }}
                 />
               </GridItem>

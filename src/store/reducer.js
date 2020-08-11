@@ -7,5 +7,6 @@ export const reducer = (state = initialState, action) => {
     const update = act(state, action.payload);
     const newState = {...state, ...update};
     setStorage("state", newState);
+    
     return newState;
 }

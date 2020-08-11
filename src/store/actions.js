@@ -1,40 +1,64 @@
 export const actions = {
     addColor: (state, payload) => {
         const id = state.maxID + 1;
-        const item = {...payload, id};
+        const item = { ...payload, id };
 
-        return {data: [...state.data, item], maxID: id};
+        return { data: [...state.data, item], maxID: id };
     },
     selectItem: (state, payload) => {
-        return {currentIndexItem: payload};
-    }, 
-    setItemName: (state, {name, index}) => {
-        const newData = [...state.data];
-        newData[index].name = name;
-
-        return {data: newData};
+        return { selectIdItem: payload };
     },
-    setItemType: (state, {type, index}) => {
-        const newData = [...state.data];
-        newData[index].type = type;
+    setItemName: (state, { name, id }) => {
+        const newData = [...state.data]
+            .map((item) => {
+                if (item.id === id) {
+                    return { ...item, name }
+                }
+                return item;
+            });
 
-        return {data: newData};
+        return { data: newData };
     },
-    updateItem: (state, {item, index}) => {
-        const newData = [...state.data];
-        newData[index] = item;
+    setItemType: (state, { type, id }) => {
+        const newData = [...state.data]
+            .map((item) => {
+                if (item.id === id) {
+                    return { ...item, type }
+                }
+                return item;
+            });
 
-        return {data: newData};
+        return { data: newData };
     },
-    deleteItem: (state, index) => {
+    updateItem: (state, { item: newItem, id }) => {
+        const newData = [...state.data]
+            .map((item) => {
+                if (item.id === id) {
+                    return newItem
+                }
+                return item;
+            });
+
+        return { data: newData };
+    },
+    deleteItem: (state, id) => {
+        let currentIndex;
         const dataLength = state.data.length;
+        const newData = state.data.filter((item, index) => {
+            if(item.id !== id) {
+                currentIndex = index;
+                return true;
+            }
+        });
+
+        currentIndex = Math.min(currentIndex, dataLength - 1);
 
         return {
-            data: state.data.filter((_, i) => i !== index), 
-            currentIndexItem: Math.min(dataLength - 2, state.currentIndexItem)
+            data: newData,
+            selectIdItem: state.data[currentIndex].id
         }
     },
     updateData: (state, payload) => {
-        return {data: payload};
+        return { data: payload };
     }
 };

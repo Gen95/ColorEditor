@@ -5,11 +5,12 @@ import { ColorModSwitcher, Buttons, ColorPicker, Field } from '../';
 import './styles.scss'
 
 export const ColorPickerPanel = () => {
-    const { state: {data, currentIndexItem }, updateItem, deleteItem } = useStore();
-    const [currentItem, setCurrentItem] = React.useState(data[currentIndexItem]);
+    const { state: {data, selectIdItem }, updateItem, deleteItem } = useStore();
+    const [currentItem, setCurrentItem] = React.useState(data.find(({id}) => id === selectIdItem) || data[0]);
     const { color: currentColor, name: currentName, type: currentType } = currentItem || {};
+
     React.useEffect(() => {document.body.style.backgroundColor = currentColor}, [currentColor]);
-    React.useEffect(() => {setCurrentItem(data[currentIndexItem])}, [currentIndexItem, data]);
+    React.useEffect(() => {setCurrentItem(data.find(({id}) => id === selectIdItem) || data[0])}, [selectIdItem, data]);
 
     const handleChangeName = (event) => {
         setCurrentItem({...currentItem, name: event.target.value});
@@ -25,11 +26,11 @@ export const ColorPickerPanel = () => {
     }
 
     const handleSave = () => {
-        updateItem({item: currentItem, index: currentIndexItem});
+        updateItem({item: currentItem, id: selectIdItem});
     }
 
     const handleDelete = () => {
-        deleteItem(currentIndexItem);
+        deleteItem(selectIdItem);
     }
 
     const handleChangeHex = (hex) => {
