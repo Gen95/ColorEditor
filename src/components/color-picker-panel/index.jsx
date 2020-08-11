@@ -34,6 +34,10 @@ export const ColorPickerPanel = () => {
     }
 
     const handleChangeHex = (hex) => {
+        if(hex.length > 7) {
+            return
+        };
+        
         setCurrentItem({...currentItem, color: hex});
     }
     

@@ -19,7 +19,7 @@ export const ColorModSwitcher = ({currentItem, onChangeHex}) => {
         let c;
         if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
             c= hex.substring(1).split('');
-            if(c.length== 3){
+            if(c.length == 3){
                 c= [c[0], c[0], c[1], c[1], c[2], c[2]];
             }
             c= '0x'+c.join('');
@@ -29,7 +29,6 @@ export const ColorModSwitcher = ({currentItem, onChangeHex}) => {
                 b: c&255
             };
         }
-        throw new Error('Bad Hex');
     }
     
     const rgbColor = React.useMemo(() => hexToRgbA(currentItem.color), [currentItem.color]);
