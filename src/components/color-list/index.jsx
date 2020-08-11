@@ -18,21 +18,6 @@ export const ColorList = () => {
     updateData,
   } = useStore();
 
-  const [items, setItems] = React.useState(
-    data.map((item, index) => ({ ...item, id: index }))
-  );
-//   const [idMap, setIdMap] = React.useState({});
-//   React.useEffect(()=>{
-//     updateData(items);
-
-//     // setItems(data.map((item, index) => ({ ...item, id: idMap[index] })))
-//   }, [items]);
-
-  React.useEffect(()=>{
-    setItems(data.map((item, index) => ({ ...item, id: index })))
-  }, [data])
-
-
   const handleAddColor = () => {
     addColor({
       name: "name",
@@ -46,14 +31,8 @@ export const ColorList = () => {
   };
 
   function onChange(_, sourceIndex, targetIndex) {
-    const nextStateData = swap(items, sourceIndex, targetIndex);
-    console.log("SourceIndex", sourceIndex);
-    console.log("tARGETiNDEX", targetIndex);
-    console.log("CurrentItemIndex", currentIndexItem);
-    console.log("nextStateData", nextStateData);
+    const nextStateData = swap(data, sourceIndex, targetIndex);
 
-    // setIdMap(newIdMap);
-    setItems(nextStateData);
     updateData(nextStateData);
   }
 
@@ -68,7 +47,7 @@ export const ColorList = () => {
             rowHeight={60}
             style={{ height: "403px" }}
           >
-            {items.map((item, index) => (
+            {data.map((item, index) => (
               <GridItem key={item.id}>
                 <div
                   className={
