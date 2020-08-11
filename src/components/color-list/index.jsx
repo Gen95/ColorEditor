@@ -45,7 +45,6 @@ export const ColorList = () => {
             id="items"
             boxesPerRow={5}
             rowHeight={60}
-            style={{ height: "403px" }}
           >
             {data.map((item, index) => (
               <GridItem key={item.id}>

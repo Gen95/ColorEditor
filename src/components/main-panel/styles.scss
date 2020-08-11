@@ -9,6 +9,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    min-width: 300px;
+    box-sizing: border-box;
+
+    @media (max-width: 680px) { 
+        flex-direction: column;
+    }
 
     &__col {
         display: flex;
@@ -17,5 +23,9 @@
 
     &__col + &__col {
         margin-left: 12px;
+        @media (max-width: 680px) { 
+            margin-left: 0px;
+            margin-top: 12px;
+        }
     }
 }
