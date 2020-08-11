@@ -4,7 +4,8 @@ import React, { createContext, useContext, useCallback } from 'react';
 
 export const initialState = getStorage("state") || {
     data,
-    currentIndexItem: 0
+    currentIndexItem: 0,
+    maxID: data.length,
 };
 
 export const Context = createContext({state: initialState});

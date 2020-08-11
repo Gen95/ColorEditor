@@ -1,6 +1,9 @@
 export const actions = {
     addColor: (state, payload) => {
-        return {data: [...state.data, payload]};
+        const id = state.maxID + 1;
+        const item = {...payload, id};
+
+        return {data: [...state.data, item], maxID: id};
     },
     selectItem: (state, payload) => {
         return {currentIndexItem: payload};
