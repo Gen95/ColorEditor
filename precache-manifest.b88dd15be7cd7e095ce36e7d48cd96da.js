@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e99ad0f55bcc7056f22bee7ad1750e91",
+    "revision": "4b29c2f49c0c97ece0b3255f11a8d096",
     "url": "/ColorEditor/index.html"
   },
   {
-    "revision": "34ad2503106c5d3fd2b2",
+    "revision": "60bcc65727ec6f9dd5f4",
     "url": "/ColorEditor/static/css/main.8620df82.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ColorEditor/static/js/2.0cc0bab3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "34ad2503106c5d3fd2b2",
-    "url": "/ColorEditor/static/js/main.0e28035d.chunk.js"
+    "revision": "60bcc65727ec6f9dd5f4",
+    "url": "/ColorEditor/static/js/main.0c01feef.chunk.js"
   },
   {
     "revision": "c403c01e10b38a1fecd5",

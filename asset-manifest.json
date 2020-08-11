@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ColorEditor/static/css/main.8620df82.chunk.css",
-    "main.js": "/ColorEditor/static/js/main.0e28035d.chunk.js",
-    "main.js.map": "/ColorEditor/static/js/main.0e28035d.chunk.js.map",
+    "main.js": "/ColorEditor/static/js/main.0c01feef.chunk.js",
+    "main.js.map": "/ColorEditor/static/js/main.0c01feef.chunk.js.map",
     "runtime-main.js": "/ColorEditor/static/js/runtime-main.09abe6e9.js",
     "runtime-main.js.map": "/ColorEditor/static/js/runtime-main.09abe6e9.js.map",
     "static/js/2.0cc0bab3.chunk.js": "/ColorEditor/static/js/2.0cc0bab3.chunk.js",
     "static/js/2.0cc0bab3.chunk.js.map": "/ColorEditor/static/js/2.0cc0bab3.chunk.js.map",
     "index.html": "/ColorEditor/index.html",
-    "precache-manifest.7e209e1ad0cea8de28eba2deaeb95eda.js": "/ColorEditor/precache-manifest.7e209e1ad0cea8de28eba2deaeb95eda.js",
+    "precache-manifest.b88dd15be7cd7e095ce36e7d48cd96da.js": "/ColorEditor/precache-manifest.b88dd15be7cd7e095ce36e7d48cd96da.js",
     "service-worker.js": "/ColorEditor/service-worker.js",
     "static/css/main.8620df82.chunk.css.map": "/ColorEditor/static/css/main.8620df82.chunk.css.map",
     "static/js/2.0cc0bab3.chunk.js.LICENSE.txt": "/ColorEditor/static/js/2.0cc0bab3.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.09abe6e9.js",
     "static/js/2.0cc0bab3.chunk.js",
     "static/css/main.8620df82.chunk.css",
-    "static/js/main.0e28035d.chunk.js"
+    "static/js/main.0c01feef.chunk.js"
   ]
 }
