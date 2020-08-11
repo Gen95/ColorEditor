@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ColorEditor/static/css/main.8620df82.chunk.css",
-    "main.js": "/ColorEditor/static/js/main.0c01feef.chunk.js",
-    "main.js.map": "/ColorEditor/static/js/main.0c01feef.chunk.js.map",
+    "main.css": "/ColorEditor/static/css/main.b37c47c5.chunk.css",
+    "main.js": "/ColorEditor/static/js/main.48c5654e.chunk.js",
+    "main.js.map": "/ColorEditor/static/js/main.48c5654e.chunk.js.map",
     "runtime-main.js": "/ColorEditor/static/js/runtime-main.09abe6e9.js",
     "runtime-main.js.map": "/ColorEditor/static/js/runtime-main.09abe6e9.js.map",
     "static/js/2.0cc0bab3.chunk.js": "/ColorEditor/static/js/2.0cc0bab3.chunk.js",
     "static/js/2.0cc0bab3.chunk.js.map": "/ColorEditor/static/js/2.0cc0bab3.chunk.js.map",
     "index.html": "/ColorEditor/index.html",
-    "precache-manifest.b88dd15be7cd7e095ce36e7d48cd96da.js": "/ColorEditor/precache-manifest.b88dd15be7cd7e095ce36e7d48cd96da.js",
+    "precache-manifest.293594831b3588b558b31db505e6e316.js": "/ColorEditor/precache-manifest.293594831b3588b558b31db505e6e316.js",
     "service-worker.js": "/ColorEditor/service-worker.js",
-    "static/css/main.8620df82.chunk.css.map": "/ColorEditor/static/css/main.8620df82.chunk.css.map",
+    "static/css/main.b37c47c5.chunk.css.map": "/ColorEditor/static/css/main.b37c47c5.chunk.css.map",
     "static/js/2.0cc0bab3.chunk.js.LICENSE.txt": "/ColorEditor/static/js/2.0cc0bab3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.09abe6e9.js",
     "static/js/2.0cc0bab3.chunk.js",
-    "static/css/main.8620df82.chunk.css",
-    "static/js/main.0c01feef.chunk.js"
+    "static/css/main.b37c47c5.chunk.css",
+    "static/js/main.48c5654e.chunk.js"
   ]
 }
