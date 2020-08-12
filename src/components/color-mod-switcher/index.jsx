@@ -35,9 +35,9 @@ export const ColorModSwitcher = ({currentItem, onChangeHex}) => {
                 r: (c>>16)&255,
                 g: (c>>8)&255,
                 b: c&255,
-                sr: (((c>>16)&255) / 255).toFixed(1),
-                sg: (((c>>8)&255) / 255).toFixed(1),
-                sb: ((c&255) / 255).toFixed(1)
+                sr: (((c>>16)&255) / 255).toFixed(2),
+                sg: (((c>>8)&255) / 255).toFixed(2),
+                sb: ((c&255) / 255).toFixed(2)
             };
         }
     }
@@ -65,9 +65,9 @@ export const ColorModSwitcher = ({currentItem, onChangeHex}) => {
                 <Field width={47} label="B:" type="number" max="255" min="0" value={rgbColor.b} onChange={(event) => {handleChangeRGB({b: event.target.value})}}/>
             </div>}
             {mod === "sRGB" && <div className="color-mod-switcher__fields">
-                <Field width={47} step="0.1" label="R:" type="number" max="1" min="0" value={rgbColor.sr} onFocus={handleFocus} onChange={(event) => {handleChangeSRGB({sr: event.target.value})}}/>
-                <Field width={47} step="0.1" label="G:" type="number" max="1" min="0" value={rgbColor.sg} onFocus={handleFocus} onChange={(event) => {handleChangeSRGB({sg: event.target.value})}}/>
-                <Field width={47} step="0.1" label="B:" type="number" max="1" min="0" value={rgbColor.sb} onFocus={handleFocus} onChange={(event) => {handleChangeSRGB({sb: event.target.value})}}/>
+                <Field width={47} step="0.01" label="R:" type="number" max="1" min="0" value={rgbColor.sr} onFocus={handleFocus} onChange={(event) => {handleChangeSRGB({sr: event.target.value})}}/>
+                <Field width={47} step="0.01" label="G:" type="number" max="1" min="0" value={rgbColor.sg} onFocus={handleFocus} onChange={(event) => {handleChangeSRGB({sg: event.target.value})}}/>
+                <Field width={47} step="0.01" label="B:" type="number" max="1" min="0" value={rgbColor.sb} onFocus={handleFocus} onChange={(event) => {handleChangeSRGB({sb: event.target.value})}}/>
             </div>}
             <div className="color-mod-switcher__tabs">
                 <Button active={mod === "RGB"} onClick={() => {setMod("RGB")}}>RGB</Button>
